@@ -39,7 +39,10 @@
     <p>Hello</p>
     <p>tout le monde !</p>
 
-    <p>Bonjour, <br> tout le monde !</p>
+    <p>
+      Bonjour, <br />
+      tout le monde !
+    </p>
 
     <!-- 
       Titres : <hx> ... </hx> → x: 1 à 6
@@ -69,5 +72,106 @@
     <p>Ceci est un <em>texte</em></p>
     <p>Ceci est un <mark>texte</mark></p>
 
+    <!-- 
+      Listes
+
+      - Listes non ordonnées (unordered list)
+      - Listes ordonnées (ordered list)
+      - Listes de définitions (defintion list)
+
+      Présents dans une liste : élément de liste (list item)
+
+    -->
+
+    <h2>Liste d'animaux :</h2>
+    <ul>
+      <li>Chats</li>
+      <li>Chiens</li>
+      <li>Canaris</li>
+      <li>Chevaux</li>
+    </ul>
+
+    <h2>Plats préférés:</h2>
+    <ol>
+      <li>Makis / Sushis</li>
+      <li>Pâtes carbonara</li>
+      <li>Steak Frites</li>
+    </ol>
+
+    <h2>Langages:</h2>
+    <dl>
+      <!-- Titre de définition (definition title) -->
+      <!-- Description de définition (definition description) -->
+
+      <dt>HTML</dt>
+      <dd>Structure d'un site internet</dd>
+
+      <dt>CSS</dt>
+      <dd>Style d'un site internet</dd>
+
+      <dt>JavaScript</dt>
+      <dd>Dynamisme d'un site internet</dd>
+    </dl>
+
+    <!-- Sous-liste dans une liste -->
+
+    <ul>
+      <li>
+        Front-end
+        <ul>
+          <li>HTML / CSS</li>
+          <li>JavaScript</li>
+          <li>Angular</li>
+        </ul>
+      </li>
+
+      <li>
+        Backend
+        <ul>
+          <li>
+            JavaScript
+            <ul>
+              <li>Express</li>
+              <li>Nest.js</li>
+            </ul>
+          </li>
+          <li>
+            .NET
+            <ul>
+              <li>ASP.NET Core WEB API</li>
+              <li>MVVM</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- 
+      Liens: <a> ... </a> 
+    -->
+
+    <h2>Liens:</h2>
+
+    <ul>
+      <li><a href="demo_01_base.html">Page 1</a></li>
+      <li><a href="./page2.html">Page 2</a></li>
+
+      <li><a href="../../exercices/exo_01.html">Exercice 01</a></li>
+    </ul>
+
+    <!-- 
+      Images: <img />
+    -->
+
+    <h2>Les images:</h2>
+    <!-- Chemin absolu externe -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1OKzUXp9CgL_xrc8N91IyDuVe5wliZd4Ra2PEu4ir4Q&s=10" alt="">
+
+    <!-- Chemin absolu interne -->
+    <!-- <img src="C:/BStorm/Formations/BruxellesFormation/BF_Tosa2026__HTML/demonstrations/01_base/images/bart-simpson.png" alt="Bart Simpson"> -->
+
+    <!-- Chemin relatif interne -->
+    <img src="./images/bart-simpsons.png" alt="Bart Simpson">
+    
   </body>
 </html>

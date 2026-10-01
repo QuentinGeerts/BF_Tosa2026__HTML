@@ -1,0 +1,99 @@
+<!-- 
+  Une feuille cv.css reliée à cv.html avec <link>
+  Une police différente pour les titres et pour le texte
+  Au moins trois sélecteurs différents : balise, classe et identifiant
+  Des couleurs de texte choisies pour les titres et les liens
+  Une capture d'écran de votre avancement dans CSS Diner 
+-->
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice CV - HTML</title>
+    <!-- link:css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>
+      <!-- Balises universelles : INLINE -->
+      <span class="text-black">Quen</span>
+      <span class="text-yellow">tin Ge</span>
+      <span class="text-red">erts</span>
+    </h1>
+
+    <h2 class="underline" id="profile">Profil</h2>
+
+    <!-- Balises universelles: BLOC -->
+    <div class="img-wrapper">
+      <img
+        src="./images/homer-simpson.jpg"
+        alt="Photo de profil de Quentin Geerts"
+      />
+    </div>
+
+    <ul>
+      <li>Né le 03/04/1996</li>
+      <li>Possède le permis B</li>
+      <li>J'ai un chat noir de 6 ans.</li>
+      <li>
+        <a href="https://www.linkedin.com/in/geerts-quentin/" target="_blank">
+          LinkedIn
+        </a>
+      </li>
+      <li>
+        Vous pouvez me contacter à l'adresse suivante :
+        <a href="mailto:quentin.geerts@bstorm.be">quentin.geerts@bstorm.be</a>
+      </li>
+      <li>
+        Téléphone :
+        <a href="tel:+32496046910">+32 496 04 69 10</a>
+      </li>
+      <li>
+        SMS :
+        <a href="sms:+32496046910">+32 496 04 69 10</a>
+      </li>
+    </ul>
+
+    <h2 class="underline" id="skills">Compétences</h2>
+
+    <ol>
+      <li>
+        Frontend
+        <ul>
+          <li>HTML / CSS</li>
+          <li class="underline">Angular</li>
+          <li>Blazor</li>
+          <li>TypeScript</li>
+          <li>React</li>
+        </ul>
+      </li>
+      <li>
+        Backend
+        <ul>
+          <li class="underline">ASP.NET Core Web API</li>
+          <li>Express</li>
+          <li>Nest.js</li>
+          <li>PHP</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2 class="underline" id="experiences">Expériences</h2>
+
+    <dl>
+      <dt>2021 - ...</dt>
+      <dd>BStorm : Développeur et formateur en développement d'application</dd>
+
+      <dt>2020 - 2021</dt>
+      <dd>Ingenum : Développeur .NET et React</dd>
+    </dl>
+
+    <hr />
+
+    <div class="pomme pomme-verte"></div>
+    <br />
+    <div class="pomme pomme-rouge"></div>
+  </body>
+</html>

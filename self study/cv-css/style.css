@@ -1,0 +1,133 @@
+/* 
+
+Syntaxe :
+
+selecteur, selecteur {
+  regle: valeur;
+  regle: valeur;
+  regle: valeur;
+}
+
+*/
+
+/*
+  ----------------------------------------
+  Reset => 
+
+  ----------------------------------------
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* 
+  ----------------------------------------
+  Changer la police d'écriture 
+  Règle : font-familly
+  ----------------------------------------
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'comic sans ms';
+}
+
+.underline {
+  text-decoration: solid underline #3f89d2 3px;
+}
+
+
+/*
+  ----------------------------------------
+  Couleur de texte (couleur belgique)
+  ----------------------------------------
+*/
+
+.text-black {
+  color: black;
+}
+
+.text-yellow {
+  color: yellow;
+}
+
+.text-red {
+  color: red;
+}
+
+
+h1:first-of-type {
+  display: flex;
+  gap: 0;
+}
+
+h1 {
+  gap: 50px;
+}
+/*
+  ----------------------------------------
+  Cadre autour de l'image
+  ----------------------------------------
+*/
+
+.img-wrapper {
+  width: 200px;
+  height: 200px;
+
+  /* Marge extérieure */
+  margin: 10px;
+
+  /* Bordure */
+  border: 4px solid red;
+
+  /* Marge intérieure */
+  padding: 5px;
+
+  /* 
+    Taille de l'élément = width + padding + border
+  */
+
+
+  overflow: hidden;
+}
+
+
+.img-wrapper img {
+  height: 100%; /*100% de la taille du contenu du parent */
+  width: 100%;
+  /* width: 100%; */
+  object-fit: cover;
+  object-position: 50%;
+}
+
+
+#profile {
+  background-color: crimson;
+}
+
+#skills {
+  background-color: darkcyan;
+}
+
+#experiences {
+  background-color: cornflowerblue;
+}
+
+.pomme {
+  border: 1px solid grey;
+  width: 150px;
+  height: 150px;
+}
+
+
+.pomme-verte {
+  background-color: greenyellow;
+}
+
+div.pomme-rouge {
+  background-color: brown
+}
+
+.pomme-rouge {
+  background-color: crimson;
+}

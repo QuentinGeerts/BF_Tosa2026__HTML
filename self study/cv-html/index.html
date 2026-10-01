@@ -1,0 +1,70 @@
+<!-- 
+  Un fichier cv.html avec le squelette complet (<!DOCTYPE html>, lang="fr", charset, <title>)
+  Un <h1> avec votre nom, puis au moins trois sections en <h2> (Profil, Compétences, Expériences…)
+  Au moins une liste <ul> ou une liste <ol>
+  Un lien externe s'ouvrant dans un nouvel onglet et un lien mailto: (documentation)
+  Une image avec un attribut alt descriptif 
+-->
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice CV - HTML</title>
+  </head>
+  <body>
+    <h1>Quentin Geerts</h1>
+
+    <h2>Profil</h2>
+    
+    <img 
+      src="./images/homer-simpson.jpg" 
+      alt="Photo de profil de Quentin Geerts" 
+      width="331"
+    />
+    
+    <ul>
+      <li>Né le 03/04/1996</li>
+      <li>Possède le permis B</li>
+      <li>J'ai un chat noir de 6 ans.</li>
+    </ul>
+
+    <h2>Compétences</h2>
+
+    <ol>
+      <li>
+        Frontend
+        <ul>
+          <li>HTML / CSS</li>
+          <li>Angular</li>
+          <li>Blazor</li>
+          <li>TypeScript</li>
+          <li>React</li>
+        </ul>
+      </li>
+      <li>
+        Backend
+        <ul>
+          <li>ASP.NET Core Web API</li>
+          <li>Express</li>
+          <li>Nest.js</li>
+          <li>PHP</li>
+        </ul>
+      </li>
+    </ol>
+
+
+    <h2>Expériences</h2>
+
+    <dl>
+      <dt>2021 - ...</dt>
+      <dd>BStorm : Développeur et formateur en développement d'application</dd>
+      
+      <dt>2020 - 2021</dt>
+      <dd>Ingenum : Développeur .NET et React</dd>
+    </dl>
+
+
+  </body>
+</html>

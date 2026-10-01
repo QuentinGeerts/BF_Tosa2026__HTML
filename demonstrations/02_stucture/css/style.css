@@ -1,0 +1,71 @@
+:root {
+  --header-height: 80px;
+  --footer-height: 60px;
+  --nav-width: 200px;
+}
+
+
+/*
+  ----------------------------------------
+  Reset
+  ----------------------------------------
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+/*
+  ----------------------------------------
+  Architecture  
+  ----------------------------------------
+*/
+
+
+body {
+  width: 100vw; /* 100% de la largeur de l'écran (viewport) */
+  height: 100vh; /* 100% de la longueur de l'écran (viewport) */
+  /* border: 3px solid red; */
+}
+
+.container {
+  width: 100%; /* 100% de la largeur du parent */
+  height: 100%; /* 100% de la longueur du parent */
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+header {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+}
+
+
+nav, main {
+  height: 100%;
+  border: 1px solid grey;
+}
+
+nav {
+  width: var(--nav-width);
+}
+
+main {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+footer{
+  height: var(--footer-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

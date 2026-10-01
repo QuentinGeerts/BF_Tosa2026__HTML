@@ -18,61 +18,98 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <!-- Corps du site : contenu -->
   <body>
-    <h1>Hello tout le monde !</h1>
+    <div class="nav">
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#paragraph">Paragraphes</a></li>
+        <li><a href="#heading">Titres</a></li>
+        <li><a href="#format">Format</a></li>
+        <li><a href="#list">Listes</a></li>
+        <li><a href="#links">Liens</a></li>
+        <li><a href="#imgs">Images</a></li>
+      </ul>
+    </div>
 
-    <!-- CTRL + : -->
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa voluptate
-      id aliquam. Autem facilis mollitia voluptatibus nam fugiat excepturi iste
-      aliquid. Commodi assumenda ut explicabo voluptatum? Tempore aliquam cumque
-      quae?
-    </p>
+    <div class="container">
 
-    <!-- 
-      Paragraphe : <p> ... </p>
-      Élément de type BLOC (prend tout l'espace)
-    -->
-    <p>Hello</p>
-    <p>tout le monde !</p>
+      <div id="introduction">
+        <h2>Introduction</h2>
 
-    <p>
-      Bonjour, <br />
-      tout le monde !
-    </p>
+        <!-- CTRL + : -->
+        <p id="p01">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa
+          voluptate id aliquam. Autem facilis mollitia voluptatibus nam fugiat
+          excepturi iste aliquid. Commodi assumenda ut explicabo voluptatum?
+          Tempore aliquam cumque quae?
+        </p>
 
-    <!-- 
+        <p class="dosis-200">Texte à tester avec la police d'écriture : Dosis</p>
+        <p class="dosis-300">Texte à tester avec la police d'écriture : Dosis</p>
+        <p class="dosis-400">Texte à tester avec la police d'écriture : Dosis</p>
+        <p class="dosis-500">Texte à tester avec la police d'écriture : Dosis</p>
+        <p class="dosis-600">Texte à tester avec la police d'écriture : Dosis</p>
+        <p class="dosis-700">Texte à tester avec la police d'écriture : Dosis</p>
+        <p class="dosis-800">Texte à tester avec la police d'écriture : Dosis</p>
+
+      </div>
+
+      <div id="paragraph">
+        <!-- 
+        Paragraphe : <p> ... </p>
+        Élément de type BLOC (prend tout l'espace)
+      -->
+
+        <h2>Paragraphes</h2>
+        <p>Hello</p>
+        <p>tout le monde !</p>
+
+        <p>
+          Bonjour, <br />
+          tout le monde !
+        </p>
+      </div>
+
+      <div id="heading">
+        <!-- 
       Titres : <hx> ... </hx> → x: 1 à 6
       Élément de type BLOC
     -->
 
-    <!-- Ne fonctionne pas -->
-    <!-- <h0>Test  1</h0> -->
-    <!-- <h7>Test  2</h7> -->
+        <h2>Titres</h2>
+        <!-- Ne fonctionne pas -->
+        <!-- <h0>Test  1</h0> -->
+        <!-- <h7>Test  2</h7> -->
 
-    <!-- Fonctionne -->
-    <h1>Titre de niveau 1</h1>
-    <h2>Titre de niveau 2</h2>
-    <h3>Titre de niveau 3</h3>
-    <h4>Titre de niveau 4</h4>
-    <h5>Titre de niveau 5</h5>
-    <h6>Titre de niveau 6</h6>
+        <!-- Fonctionne -->
+        <h1>Titre de niveau 1</h1>
+        <h2>Titre de niveau 2</h2>
+        <h3>Titre de niveau 3</h3>
+        <h4>Titre de niveau 4</h4>
+        <h5>Titre de niveau 5</h5>
+        <h6>Titre de niveau 6</h6>
+      </div>
 
-    <!-- 
+      <div id="format">
+        <!-- 
       Balise de style
       - Gras : <strong> ... </strong>
       - Italique : <em> ... </em>
       - Surligner : <mark> ... </mark>
     -->
+        <h2>Formats</h2>
 
-    <p>Ceci est un <strong>texte</strong></p>
-    <p>Ceci est un <em>texte</em></p>
-    <p>Ceci est un <mark>texte</mark></p>
+        <p>Ceci est un <strong>texte</strong></p>
+        <p>Ceci est un <em>texte</em></p>
+        <p>Ceci est un <mark>texte</mark></p>
+      </div>
 
-    <!-- 
+      <div id="list">
+        <!-- 
       Listes
 
       - Listes non ordonnées (unordered list)
@@ -83,98 +120,117 @@
 
     -->
 
-    <h2>Liste d'animaux :</h2>
-    <ul>
-      <li>Chats</li>
-      <li>Chiens</li>
-      <li>Canaris</li>
-      <li>Chevaux</li>
-    </ul>
+        <h2>Listes</h2>
 
-    <h2>Plats préférés:</h2>
-    <ol>
-      <li>Makis / Sushis</li>
-      <li>Pâtes carbonara</li>
-      <li>Steak Frites</li>
-    </ol>
-
-    <h2>Langages:</h2>
-    <dl>
-      <!-- Titre de définition (definition title) -->
-      <!-- Description de définition (definition description) -->
-
-      <dt>HTML</dt>
-      <dd>Structure d'un site internet</dd>
-
-      <dt>CSS</dt>
-      <dd>Style d'un site internet</dd>
-
-      <dt>JavaScript</dt>
-      <dd>Dynamisme d'un site internet</dd>
-    </dl>
-
-    <!-- Sous-liste dans une liste -->
-
-    <ul>
-      <li>
-        Front-end
+        <h3>Liste d'animaux :</h3>
         <ul>
-          <li>HTML / CSS</li>
-          <li>JavaScript</li>
-          <li>Angular</li>
+          <li>Chats</li>
+          <li>Chiens</li>
+          <li>Canaris</li>
+          <li>Chevaux</li>
         </ul>
-      </li>
 
-      <li>
-        Backend
+        <h3>Plats préférés:</h3>
+        <ol>
+          <li>Makis / Sushis</li>
+          <li>Pâtes carbonara</li>
+          <li>Steak Frites</li>
+        </ol>
+
+        <h3>Langages:</h3>
+        <dl>
+          <!-- Titre de définition (definition title) -->
+          <!-- Description de définition (definition description) -->
+
+          <dt>HTML</dt>
+          <dd>Structure d'un site internet</dd>
+
+          <dt>CSS</dt>
+          <dd>Style d'un site internet</dd>
+
+          <dt>JavaScript</dt>
+          <dd>Dynamisme d'un site internet</dd>
+        </dl>
+
+        <!-- Sous-liste dans une liste -->
+
         <ul>
           <li>
-            JavaScript
+            Front-end
             <ul>
-              <li>Express</li>
-              <li>Nest.js</li>
+              <li>HTML / CSS</li>
+              <li>JavaScript</li>
+              <li>Angular</li>
             </ul>
           </li>
+
           <li>
-            .NET
+            Backend
             <ul>
-              <li>ASP.NET Core WEB API</li>
-              <li>MVVM</li>
+              <li>
+                JavaScript
+                <ul>
+                  <li>Express</li>
+                  <li>Nest.js</li>
+                </ul>
+              </li>
+              <li>
+                .NET
+                <ul>
+                  <li>ASP.NET Core WEB API</li>
+                  <li>MVVM</li>
+                </ul>
+              </li>
             </ul>
           </li>
         </ul>
-      </li>
-    </ul>
+      </div>
 
-    <!-- 
+      <div id="links">
+        <!-- 
       Liens: <a> ... </a> 
     -->
 
-    <h2>Liens:</h2>
+        <h2>Liens:</h2>
 
-    <ul>
-      <li><a href="page1.html">Page 1</a></li>
-      <li><a href="./page2.html">Page 2</a></li>
+        <ul>
+          <li><a href="page1.html">Page 1</a></li>
+          <li><a href="./page2.html">Page 2</a></li>
 
-      <!-- Chemin relatif -->
-      <li><a href="../../exercices/exo_01.html">Exercice 01</a></li>
-    </ul>
+          <!-- Chemin relatif -->
+          <li><a href="../../exercices/exo_01.html">Exercice 01</a></li>
+          <li><a href="../../self study/cv-html/index.html">Exercice HTML</a></li>
+          <li><a href="../../self study/cv-css/index.html">Exercice CSS</a></li>
+        </ul>
+      </div>
 
-    <!-- 
+      <div id="imgs">
+        <!-- 
       Images: <img />
     -->
 
-    <h2>Les images:</h2>
-    <!-- Chemin absolu externe -->
-    <img
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1OKzUXp9CgL_xrc8N91IyDuVe5wliZd4Ra2PEu4ir4Q&s=10"
-      alt=""
-    />
+        <h2>Les images:</h2>
+        <!-- Chemin absolu externe -->
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1OKzUXp9CgL_xrc8N91IyDuVe5wliZd4Ra2PEu4ir4Q&s=10"
+          alt=""
+        />
 
-    <!-- Chemin absolu interne -->
-    <!-- <img src="C:/BStorm/Formations/BruxellesFormation/BF_Tosa2026__HTML/demonstrations/01_base/images/bart-simpson.png" alt="Bart Simpson"> -->
+        <!-- Chemin absolu interne -->
+        <!-- <img src="C:/BStorm/Formations/BruxellesFormation/BF_Tosa2026__HTML/demonstrations/01_base/images/bart-simpson.png" alt="Bart Simpson"> -->
 
-    <!-- Chemin relatif interne -->
-    <img src="./images/bart-simpsons.png" alt="Bart Simpson" />
+        <!-- Chemin relatif interne -->
+        <img src="./images/bart-simpsons.png" alt="Bart Simpson" />
+
+
+        <!-- Légender une image -->
+
+        <figure>
+          <img src="" alt="Image">
+          <figcaption>Légende de l'image</figcaption>
+        </figure>
+
+      </div>
+    </div>
   </body>
 </html>

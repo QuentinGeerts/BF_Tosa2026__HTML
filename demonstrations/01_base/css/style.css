@@ -1,0 +1,100 @@
+@import "./variables.css";
+@import "./fonts.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-bg);
+  font-family: 'Dosis';
+}
+
+div.container {
+  width: 80vw; /* viewport width */
+  margin: 30px auto 50px;
+  background: white;
+
+  /* Permet de scroll automatiquement vers l'id de manière fluide */
+  scroll-behavior: smooth;
+}
+
+div h2:first-child {
+  color: var(--main-color);
+}
+
+div {
+  /*
+    ----------------------------------------
+    Marge extérieure : margin
+    ----------------------------------------
+  */
+
+  /* 10px tout autour */
+  margin: 10px;
+
+  /* 10px verticalement 20px horizontalement */
+  margin: 10px 20px;
+
+  /* Chaque côté spécifique (commence en haut) */
+  margin: 10px 20px 30px 40px;
+
+  /* Haut horizontal bas */
+  margin: 10px 30px 50px;
+
+  /*
+    ----------------------------------------
+    Marge intérieure : padding
+    ----------------------------------------
+  */
+
+  padding: 30px;
+  padding: 30px 50px;
+  padding: 30px 50px 80px 150px;
+  padding: 10px 10px 30px;
+}
+
+
+.text-blue {
+  color: var(--main-color);
+}
+
+a {
+  color: var(--main-color);
+}
+
+
+p#p01 {
+
+  font-weight: 00;
+
+}
+
+
+.dosis-200 {
+  font-weight: 200;
+}
+
+.dosis-300 {
+  font-weight: 300;
+}
+
+.dosis-400 {
+  font-weight: 400;
+}
+
+.dosis-500 {
+  font-weight: 500;
+}
+
+.dosis-600 {
+  font-weight: 600;
+}
+
+.dosis-700 {
+  font-weight: 700;
+}
+
+.dosis-800 {
+  font-weight: 800;
+}

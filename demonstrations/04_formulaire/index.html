@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <nav>
+      <ul>
+        <li><a href="demo02.html">Démonstraiton 02 - Suite</a></li>
+      </ul>
+    </nav>
+
+    <h1>Les formulaires</h1>
+
+    <!-- 
+      Méthode par défaut: get 
+      GET: Les données passent par l'URL (recherche)
+      POST: Les données passent par l'en-tête de la requête HTTP (sensible)
+
+      Action: La page sur laquelle sont envoyés les données
+
+      Pour faire de l'upload de fichier :  enctype="multipart/form-data"
+    -->
+    <form method="get" action="index.html" enctype="multipart/form-data">
+      <!-- Types: Texte -->
+
+      <!-- label -->
+      <label for="prenom-id">Prénom:</label>
+      <!-- input:text -->
+      <input type="text" name="prenom" id="prenom-id" />
+
+      <label for="nom">
+        Nom:
+        <input type="text" name="nom" id="nom" />
+      </label>
+
+      <!-- Types: email -->
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" />
+
+      <!-- Types: password -->
+
+      <label for="password">Mot de passe:</label>
+      <input type="password" name="password" id="password" />
+
+      <!-- Types: number -->
+
+      <label for="age">Âge:</label>
+      <input type="number" name="age" id="age" />
+
+      <!-- Types: tel -->
+      <!-- Types: url -->
+      <!-- Types: search -->
+
+      <label for="range">Range:</label>
+      <input type="range" name="range" id="range" step="1" min="0" max="5">
+
+      <!-- Types: date / time / datetime-local -->
+      <label for="date">Date:</label>
+      <input type="date" name="date" id="date">
+      
+      <label for="heure">Heure:</label>
+      <input type="time" name="heure" id="heure">
+
+      <label for="dateheure">Date et heure:</label>
+      <input type="datetime-local" name="dateheure" id="dateheure">
+
+      <!-- Types: color -->
+
+      <label for="couleur">Couleur préférée:</label>
+      <input type="color" name="couleur" id="couleur" alpha>
+
+      <!-- Types: file -->
+
+      <label for="file">Téléversement:</label>
+      <input type="file" name="file" id="file">
+
+      <!-- Types: hidden -->
+       <input type="hidden" name="id" value="0123456789">
+
+      <!-- Bouton à faire en général -->
+      <button>Envoyer</button>
+
+      <!-- Petits trucs et astuces -->
+      <!-- <button formmethod="get">Envoyer GET</button> -->
+      <!-- <button formmethod="post">Envoyer POST</button> -->
+    </form>
+  </body>
+</html>

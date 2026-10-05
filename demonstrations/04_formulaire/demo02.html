@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Démonstraiton 01 - La base du formulaire</a>
+        </li>
+      </ul>
+    </nav>
+
+    <h1>Les formulaires - Suite</h1>
+
+    <form>
+      <!-- 
+        Bouton radio => valeur unique 
+        Attention, le name doit être le même pour tout le groupement des radios
+      -->
+
+      <h3>Demande de formation:</h3>
+      <label for="html">
+        <input type="radio" name="demande" id="html" value="html" checked />
+        HTML
+      </label>
+      <label for="css">
+        <input type="radio" name="demande" id="css" value="css" />
+        CSS
+      </label>
+      <label for="js">
+        <input type="radio" name="demande" id="js" value="js" />
+        Javascript
+      </label>
+
+      <h3>Horaire:</h3>
+      <label for="matin">
+        <input type="radio" name="horaire" id="matin" value="matin" checked />
+        Matin
+      </label>
+      <label for="soir">
+        <input type="radio" name="horaire" id="soir" value="soir" />
+        Soir
+      </label>
+
+      <!-- Boite à cocher => valeurs multiples -->
+
+      <h3>Demande de formation(s):</h3>
+
+      <label for="html-demandes">
+        <input type="checkbox" name="html" id="html-demandes" />
+        HTML
+      </label>
+
+      <label for="css-demandes">
+        <input type="checkbox" name="css" id="css-demandes" checked />
+        CSS
+      </label>
+
+      <label for="js-demandes">
+        <input type="checkbox" name="js" id="js-demandes" />
+        JavaScript
+      </label>
+
+      <!-- Liste déroulante -->
+
+      <label for="countries">Pays:</label>
+      <!-- <select name="country" id="countries" multiple> -->
+      <select name="country" id="countries">
+        <optgroup label="Europe">
+          <option value="be">Belgique</option>
+          <option value="fr">France</option>
+          <option value="nl">Pays-bas</option>
+        </optgroup>
+
+        <optgroup label="Asie">
+          <option value="jp" selected>Japon</option>
+        </optgroup>
+        <optgroup label="Amériques">
+          <option value="ca">Canada</option>
+        </optgroup>
+      </select>
+
+      <!-- Zone de texte multiple -->
+
+      <label for="description">Description:</label>
+      <textarea
+        name="description"
+        id="description"
+        rows="4"
+        cols="50"
+      ></textarea>
+
+      <!-- Suggestions de saisie -->
+
+      <label for="nav">Navigateur:</label>
+      <input type="text" name="nav" id="nav" list="navigateurs" />
+
+      <datalist id="navigateurs">
+        <option value="Chrome"></option>
+        <option value="Firefox"></option>
+        <option value="Edge"></option>
+      </datalist>
+
+      <!-- Boutons -->
+
+      <label for="search">Recherche:</label>
+      <input type="text" name="q" id="search" value="Texte" />
+
+      <button type="submit">Envoyer</button>
+      <button type="reset">Effacer</button>
+      <button type="button">Action JS</button>
+
+
+      <!-- Affichage informatif -->
+
+      <label for="text">Texte informatif</label>
+      <input type="text" name="text" id="text" placeholder="Text informatif...">
+
+
+      <!-- 
+        Attributs de validation
+
+        required: rend le champ obligatoire
+        minlength: nombre minimum de caractères
+        maxlength: nombre maximum de caractères
+        min: nombre minimum
+        max: nombre maximum
+      -->
+
+      <label for="pseudo">Pseudo:</label>
+      <input type="text" name="pseudo" id="pseudo" required minlength="3" maxlength="15">
+
+      <label for="age">Âge:</label>
+      <input type="number" name="age" id="age" min="0" max="150" value="0" step="0.001">
+
+      <label for="id">ID:</label>
+      <input type="text" name="id" id="id" value="42" readonly>
+
+      <label for="test">Désactivé:</label>
+      <input type="text" name="test" id="test" value="42" disabled>
+
+      <label for="cp">Code postal:</label>
+      <input type="text" name="cp" id="cp" pattern="[0-9]{4}" required>
+
+
+      <button>Envoyer</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice 2 - Les tableaux</title>
+    <link rel="stylesheet" href="exo_02.css" />
+  </head>
+  <body>
+    <h1>Exercice 2 : les tableaux</h1>
+
+    <h2>Partie A : bon de commande</h2>
+
+    <table class="bon-commande">
+      <caption>
+        Bon de commande n°2026-042
+      </caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Réf.</th>
+          <th scope="col">Produit</th>
+          <th scope="col" class="nombre">Quantité</th>
+          <th scope="col" class="nombre">Prix unitaire</th>
+          <th scope="col" class="nombre">Total</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">R001</th>
+          <td>Clavier mécanique</td>
+          <td class="nombre">2</td>
+          <td class="nombre">79,90 €</td>
+          <td class="nombre">159,80 €</td>
+        </tr>
+        <tr>
+          <th scope="row">R002</th>
+          <td>Souris sans fil</td>
+          <td class="nombre">1</td>
+          <td class="nombre">29,99 €</td>
+          <td class="nombre">29,99 €</td>
+        </tr>
+        <tr>
+          <th scope="row">R003</th>
+          <td>Écran 27 pouces</td>
+          <td class="nombre">2</td>
+          <td class="nombre">249,00 €</td>
+          <td class="nombre">498,00 €</td>
+        </tr>
+        <tr>
+          <th scope="row">R004</th>
+          <td>Câble HDMI</td>
+          <td class="nombre">3</td>
+          <td class="nombre">9,50 €</td>
+          <td class="nombre">28,50 €</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <!-- colspan="4" : la cellule prend la place des 4 premières colonnes -->
+          <th scope="row" colspan="4">Total de la commande</th>
+          <td class="nombre">716,29 €</td>
+        </tr>
+        <!-- Bonus : TVA et total TVAC -->
+        <tr>
+          <th scope="row" colspan="4">TVA (21 %)</th>
+          <td class="nombre">150,42 €</td>
+        </tr>
+        <tr>
+          <th scope="row" colspan="4">Total TVAC</th>
+          <td class="nombre">866,71 €</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <h2>Partie B : horaire de la semaine</h2>
+
+    <table class="horaire">
+      <thead>
+        <tr>
+          <th colspan="6">Semaine 3 - du 12 au 16 octobre</th>
+        </tr>
+        <tr>
+          <td></td>
+          <th scope="col">Lundi 12</th>
+          <th scope="col">Mardi 13</th>
+          <th scope="col">Mercredi 14</th>
+          <th scope="col">Jeudi 15</th>
+          <th scope="col">Vendredi 16</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">Matin</th>
+          <td>Positionnement</td>
+          <td rowspan="2" class="self-study">Self study</td>
+          <td rowspan="2" class="self-study">Self study</td>
+          <td>Responsive et HTML avancé</td>
+          <td rowspan="2" class="self-study">Self study</td>
+        </tr>
+        <tr>
+          <th scope="row">Après-midi</th>
+          <td>Flexbox</td>
+          <td class="coaching">Coaching</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

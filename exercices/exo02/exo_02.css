@@ -1,0 +1,63 @@
+/* Couleurs du site */
+:root {
+  --couleur-bordure: #8a8a8a;
+  --couleur-entete: #b7c6d3;
+  --couleur-pied: #f0f0f0;
+  
+  --couleur-self-study: #f1e0f0;
+  --couleur-coaching: #d6c6ac;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+}
+
+/* Fusionner les bordures des cellules + espacer les tableaux entre eux */
+table {
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+/* Bordure et espacement intérieur de toutes les cellules */
+th,
+td {
+  border: 1px solid var(--couleur-bordure);
+  padding: 8px 12px;
+}
+
+/* Fond des en-têtes */
+thead {
+  background-color: var(--couleur-entete);
+}
+
+/* Fond du pied du bon de commande (facultatif) */
+tfoot {
+  background-color: var(--couleur-pied);
+}
+
+/* Légende du bon de commande sous le tableau */
+.bon-commande caption {
+  caption-side: bottom;
+  padding-top: 8px;
+  font-style: italic;
+}
+
+/* Colonnes de quantité et de prix alignées à droite */
+.nombre {
+  text-align: right;
+}
+
+/* Cellules colorées de l'horaire */
+.self-study {
+  background-color: var(--couleur-self-study);
+}
+
+.coaching {
+  background-color: var(--couleur-coaching);
+}
+
+/* Centrer le contenu de l'horaire (facultatif) */
+.horaire td {
+  text-align: center;
+}

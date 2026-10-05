@@ -1,0 +1,46 @@
+table {
+  border: 1px solid black;
+  /* border-width: 1px;
+  border-style: solid;
+  border-color: black; */
+  /* height: 200px;
+  width: 70%; */
+
+  background-color: aquamarine;
+  /* 
+    Espacement entre les cellules 
+    Attention, ne fonctionne que si vous êtes en border-collapse: separate
+  */
+  border-spacing: 5px;
+
+  /* Fusionner les bordures internes (défaut: separate) */
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  background-color: white;
+  padding: 3px 5px;
+}
+
+div {
+  width: 200px;
+}
+
+span {
+  width: 200px;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+caption {
+  /* Choix de la position de la légende (défaut: top) */
+  caption-side: bottom;
+}
+
+.table-spacing {
+  border-collapse: separate;
+  border-spacing: 5px;
+}

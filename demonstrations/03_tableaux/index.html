@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Les tableaux</h1>
+
+    <!-- 
+      tr: ligne (Table Row)
+      td: cellule (Table Data)
+    -->
+
+    <h2>Tableau de base :</h2>
+    <table class="table-spacing">
+      <tr>
+        <td>Geerts</td>
+        <td>Quentin</td>
+        <td>30 ans</td>
+      </tr>
+
+      <tr>
+        <td>Geerts</td>
+        <td>William</td>
+        <td>23 ans</td>
+      </tr>
+    </table>
+
+    <h2>Organisation d'un tableau</h2>
+
+    <table>
+      <caption>Légende de mon tableau</caption>
+      <!-- Tête du tableau -->
+      <thead>
+        <tr>
+          <!-- 
+            En-tête de la colonne
+            th: Table Heading
+          -->
+          <th scope="col">Id</th> 
+          <th scope="col">Nom</th>
+          <th scope="col">Prix</th>
+        </tr>
+      </thead>
+      <!-- Corps du tableau -->
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Ordinateur portable</td>
+          <td>599.99 €</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Ordinateur portable</td>
+          <td>599.99 €</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Ordinateur portable</td>
+          <td>599.99 €</td>
+        </tr>
+      </tbody>
+      <!-- Pied du tableau -->
+      <tfoot>
+        <tr>
+          <td colspan="2">Total :</td>
+          <!-- <td></td> -->
+          <td>1799.97 €</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <h2>Fusion de cellule :</h2>
+
+    <table>
+      <tr>
+        <td colspan="2">1.1</td>
+        <!-- <td class="bg-yellow">1.2</td> -->
+        <td>1.3</td>
+        <td>1.4</td>
+      </tr>
+      <tr>
+        <td colspan="4">2.1</td>
+        <!-- <td class="bg-yellow">2.2</td>
+        <td class="bg-yellow">2.3</td>
+        <td class="bg-yellow">2.4</td> -->
+      </tr>
+      <tr>
+        <td rowspan="2">3.1</td>
+        <td>3.2</td>
+        <td class="bg-yellow" colspan="2" rowspan="2">3.3</td>
+        <!-- <td class="bg-yellow" >3.4</td> -->
+      </tr>
+      <tr>
+        <!-- <td class="bg-yellow">4.1</td> -->
+        <td>4.2</td>
+        <!-- <td class="bg-yellow" colspan="2">4.3</td> -->
+        <!-- <td class="bg-yellow" >4.4</td> -->
+      </tr>
+    </table>
+
+  </body>
+</html>

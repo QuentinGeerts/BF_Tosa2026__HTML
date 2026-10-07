@@ -1,0 +1,33 @@
+/*
+  Fichier importé par style.css grâce à @import.
+  On y met les règles de base communes à tout le site.
+*/
+
+@import url("./fonts.css");
+@import url("./variables.css");
+@import url("./scheme.css");
+
+* {
+  /* 
+  La taille de l'élément compte : 
+    - la taille d'élément
+    - la bordure
+    - la marge intérieure
+  */
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--main-font-style);
+  padding-bottom: 600px;
+}
+
+.box {
+  border: 1px solid steelblue;
+  padding: 10px;
+  margin: 10px 0;
+}
+

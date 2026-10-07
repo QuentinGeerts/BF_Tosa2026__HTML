@@ -1,0 +1,99 @@
+/*
+  @import: importe une autre feuille.
+  Attention: il doit être placé TOUT EN HAUT du fichier, 
+  avant toutes les autres règles
+*/
+@import url("./base.css");
+
+
+/* 1. Unités */
+
+/* px: unité absolue, ne dépend de rien */
+.px {
+  width: 200px;
+}
+
+.parent {
+  font-size: 20px;
+}
+
+/* em: relatif à la taille de la police du PARENT */
+.em {
+  font-size: 1.5em;
+}
+
+/* rem: relatif à la taille de la police de la racine html */
+.rem {
+  font-size: 1.5rem;
+}
+
+.conteneur {
+  width: 400px;
+  border: 1px dashed gray;
+}
+
+/* %: relatif à la taille de la boite du PARENT */
+.pourcentage {
+  width: 50%;
+}
+
+/*
+  vw: 1vw → 1% de la largeur de l'écran (viewport width) 
+  vh: 1vh → 1% de la hauteur de l'écran (viewport height)
+*/
+
+.viewport {
+  width: 50vw; /* 50% de la largeur de l'écran */
+  height: 15vh; /* 15% de la hauteur de l'écran */
+}
+
+/* 2. Couleurs */
+
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.couleur {
+  width: 160px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Nom de la couleur: environ 140 couleurs nommées */
+.nom {
+  background-color: tomato;
+}
+
+/* Hexadécimal: #RRGGBB (rouge, vert, blue de 00 à ff) */
+.hex {
+  background: #3498db;
+}
+
+/* Hexadécimal court: #RGB équivaut à #RRGGBB (#f80 = #ff8800) */
+.hex-court {
+  background-color: #f80;
+}
+
+/* rgb(): rouge, vert bleu de 0 à 255 */
+.rgb {
+  background-color: rgb(46, 204, 113);
+}
+
+/* rgba(): + transparence (alpha) de 0 (invisible) à 1 (opaque) */
+.rgba {
+  background-color: rgba(46, 204, 113, 0.4);
+}
+
+/* 
+  hsl(): teinte (0 à 360°), saturation (%), luminosité (%) 
+  Pratique pour créer des variantes d'une même couleur
+*/
+.hsl {
+  background-color: hsl(280, 100%, 50%);
+}
+
+.hsla {
+  background-color: hsla(280, 100%, 50%, 0.4);
+}

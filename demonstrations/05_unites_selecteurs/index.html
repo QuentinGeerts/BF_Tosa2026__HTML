@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr" data-scheme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS : sélecteur et unités</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Menu: démonstration avec :hover -->
+
+    <nav>
+      <ul class="menu">
+        <li><a href="#unites">Unités</a></li>
+        <li><a href="#couleurs">Couleurs</a></li>
+        <li><a href="#typo">Typographie</a></li>
+        <li><a href="#pseudo-classes">Pseudo-classes</a></li>
+        <li><a href="#pseudo-elements">Pseudo-éléments</a></li>
+      </ul>
+    </nav>
+
+    <h1>Unités, sélecteurs spéciaux et priorité</h1>
+
+    <!-- 1.  Unités -->
+
+    <section id="unites">
+      <h2>1. Les unités</h2>
+
+      <h3>Unités absolues</h3>
+      <div class="box px">width: 200px</div>
+
+      <h3>Unités relatives à la police</h3>
+      <div class="parent box">
+        Parent: font-size 20px
+        <p class="em">em: 2em = 2 * la taille du parent (40px)</p>
+        <p class="rem">rem: 2rem = 2 * la taille de la RACINE html (32px)</p>
+      </div>
+
+      <h3>Unités relatives au contenur et à l'écran</h3>
+      <div class="conteneur">
+        <div class="box pourcentage">width: 50% (du parent)</div>
+      </div>
+
+      <div class="box viewport">width: 50vw / height: 15vh (de l'écran)</div>
+    </section>
+      
+    <!-- Couleur -->
+
+    <section id="couleurs">
+      <h2>2.  Les unités de couleurs</h2>
+
+      <div class="palette">
+        <div class="couleur nom">Nom:<br>tomato</div>
+        <div class="couleur hex">Hexadécimal:<br>#3498db</div>
+        <div class="couleur hex-court">Hexa-court:<br>#f80</div>
+        <div class="couleur rgb">rgb(46, 204, 113)</div>
+        <div class="couleur rgba">rgba(46, 204, 113, 0.4)</div>
+        <div class="couleur hsl">hsl(280, 100%, 50%)</div>
+        <div class="couleur hsla">hsla(280, 100%, 50%, 0.4)</div>
+      </div>
+    </section>
+      
+  </body>
+</html>

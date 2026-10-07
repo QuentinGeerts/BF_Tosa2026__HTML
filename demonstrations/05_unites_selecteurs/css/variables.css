@@ -1,0 +1,14 @@
+:root {
+  /* GLOBAL SCHEME */
+  --main-font-style: 'Dosis';
+  --main-accent-color: #00ff22;
+  --main-accent-font-style: 'Arial';
+
+  /* LIGHT SCHEME */
+  --main-light-color: #3d3d3d;
+  --main-dark-color: white;
+
+  /* DARK SCHEME */
+  --main-light-bg-color: white;
+  --main-dark-bg-color: #3d3d3d;
+}

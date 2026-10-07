@@ -75,3 +75,45 @@ Dans `exo_02.css` :
 
 - Vérifier votre page avec le validateur du W3C : https://validator.w3.org/#validate_by_input
 - Ajouter une ligne « TVA (21 %) » et une ligne « Total TVAC » dans le pied du bon de commande
+
+
+## 3. Menu de navigation et carte du café
+
+Créer le dossier `exo03` avec une page `index.html` et un dossier `css` contenant `style.css` et `variables.css`.
+
+### Partie A : Structure HTML
+
+La page du café "Le Grain" contient :
+- Un menu de navigation avec 5 liens : Accueil, Carte, Événements, Galerie, Contact. Le lien "Carte" a la classe `actif` (c'est la page en cours)
+- Un titre `h1` et un paragraphe d'introduction
+- Un tableau "Nos boissons" avec une légende et 3 colonnes : Boisson, Taille, Prix (au moins 6 boissons)
+
+Les prix sont écrits **sans** le symbole € dans le HTML : `<td class="prix">2.50</td>`
+
+### Partie B : Le menu (CSS)
+
+- Les couleurs et la police sont définies dans `variables.css` (`:root`), importé dans `style.css` avec `@import`
+- Le menu est horizontal (`display: flex` sur le `ul`), sans puces, avec un espace entre les liens
+- Les liens sont en majuscules, sans soulignement, avec une marge intérieure en `em`
+- **Au survol** (`:hover`) : le lien change de couleur de fond et de couleur de texte
+- **Au clic** (`:active`) : le lien prend une troisième couleur
+- **Au focus** (`:focus`, touche Tab) : le lien a un contour visible
+- Le lien `.actif` est souligné par une bordure en bas et précédé d'un " ▸ " ajouté en CSS (`::before`)
+- Le dernier lien "Contact" ressemble à un bouton, avec une bordure (`:last-child`)
+
+### Partie C : La carte (CSS)
+
+- Une ligne sur deux du `tbody` a une couleur de fond (`nth-child`)
+- La ligne survolée change de couleur (`tr:hover`)
+- Le symbole "€" est ajouté après chaque prix en CSS (`::after`)
+- Le tableau fait 80 % de la largeur de la page
+
+Contraintes sur les unités :
+- Toutes les tailles de texte sont en `rem`
+- Les couleurs utilisent au moins 3 notations différentes (nom, hexadécimal, `rgb()`/`rgba()` ou `hsl()`)
+
+### Bonus
+
+- La première lettre du paragraphe d'introduction est une lettrine (`::first-letter`)
+- Ajouter un thème sombre automatique avec `@media (prefers-color-scheme: dark)`
+- Utiliser une police téléchargée avec `@font-face`

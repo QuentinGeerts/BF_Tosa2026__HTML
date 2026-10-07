@@ -43,22 +43,125 @@
 
       <div class="box viewport">width: 50vw / height: 15vh (de l'écran)</div>
     </section>
-      
+
     <!-- Couleur -->
 
     <section id="couleurs">
-      <h2>2.  Les unités de couleurs</h2>
+      <h2>2. Les unités de couleurs</h2>
 
       <div class="palette">
-        <div class="couleur nom">Nom:<br>tomato</div>
-        <div class="couleur hex">Hexadécimal:<br>#3498db</div>
-        <div class="couleur hex-court">Hexa-court:<br>#f80</div>
+        <div class="couleur nom">Nom:<br />tomato</div>
+        <div class="couleur hex">Hexadécimal:<br />#3498db</div>
+        <div class="couleur hex-court">Hexa-court:<br />#f80</div>
         <div class="couleur rgb">rgb(46, 204, 113)</div>
         <div class="couleur rgba">rgba(46, 204, 113, 0.4)</div>
         <div class="couleur hsl">hsl(280, 100%, 50%)</div>
         <div class="couleur hsla">hsla(280, 100%, 50%, 0.4)</div>
       </div>
     </section>
-      
+
+    <!-- Typographie -->
+
+    <section id="typo">
+      <h2>3. Style, poids et transformation du texte</h2>
+
+      <p class="leger">font-weight: 300 (léger)</p>
+      <p class="gras">font-weight: bold (700)</p>
+      <p class="italique">font-style: italic</p>
+      <p class="majuscule">text-decoration: uppercase</p>
+      <p class="minuscule">text-decoration: LOWERCASE</p>
+      <p class="capitalize">text-DECORATION: capitalize sur chaque mot</p>
+    </section>
+
+    <!-- Pseudo-classes -->
+
+    <section id="pseudo-classes">
+      <h2>4. Les pseudo-classes</h2>
+
+      <h3>:first-child, :last-child, :nth-child()</h3>
+      <ul class="liste">
+        <li>Élement 1 (first-child)</li>
+        <li>Élement 2</li>
+        <li>Élement 3</li>
+        <li>Élement 4</li>
+        <li>Élement 5</li>
+        <li>Élement 6</li>
+        <li>Élement 7</li>
+        <li>Élement 8</li>
+        <li>Élement 9</li>
+        <li>Élement 10</li>
+        <li>Élement 11</li>
+        <li>Élement 12</li>
+        <li>Élement 13</li>
+        <li>Élement 14</li>
+        <li>Élement 15 (last-child)</li>
+      </ul>
+
+      <table class="tab">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Geerts</td>
+            <td>Quentin</td>
+          </tr>
+          <tr>
+            <td>Person</td>
+            <td>Michael</td>
+          </tr>
+          <tr>
+            <td>Morre</td>
+            <td>Thierry</td>
+          </tr>
+          <tr>
+            <td>Herssens</td>
+            <td>Caroline</td>
+          </tr>
+          <tr>
+            <td>Coulon</td>
+            <td>Olivier</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <th colspan="2">Liste des personnes</th>
+        </tfoot>
+      </table>
+
+      <h3>:hover, :active, :focus</h3>
+
+      <button class="bouton">Survolez-moi puis cliquez</button>
+
+      <label for="nom">Nom:</label>
+      <input
+        type="text"
+        name="nom"
+        id="nom"
+        placeholder="Cliquez dans le champ"
+      />
+
+      <h3>:link, :visited</h3>
+
+      <p>
+        <a href="https://developer.mozilla.org/fr/">MDN fr</a>
+        <a href="https://developer.mozilla.org/en/">MDN en</a>
+        <a href="https://developer.mozilla.org/de/">MDN de</a>
+      </p>
+    </section>
+
+    <section id="pseudo-elements">
+      <h2>5. Pseudo-éléments</h2>
+
+      <p class="note">Le contenu "Note : " est ajouté par le CSS.</p>
+      <p class="citation">Le CSS ajoute les guillemets autour de cette texte</p>
+      <p class="lettrine">
+        <span class="emphase">La</span> première lettre de ce paragraphe est
+        stylisée avec ::first-letter. Sélectionnez ce texte pour voir
+        ::selection en action.
+      </p>
+    </section>
   </body>
 </html>

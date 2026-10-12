@@ -128,6 +128,23 @@ code {
   z-index: 999;
 }
 
+/*
+  sticky: se comporte comme relative, puis "colle" quand on fait défiler son conteneur
+*/
+
+.defilement {
+  height: 120px;
+  overflow: auto;
+}
+
+.collant {
+  position: sticky;
+  top: 0;
+  margin: 0;
+  padding: 5px;
+  background-color: tomato;
+}
+
 /* === Flex === */
 
 /* === Grid === */

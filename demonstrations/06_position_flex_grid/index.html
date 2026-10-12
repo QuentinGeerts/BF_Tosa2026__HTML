@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position, Flex et Grid</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+    <h1>Position, Flex et Grid</h1>
+
+
+    <section>
+      <h2>Position:</h2>
+      <p>Par défaut, tout élément est en <code>position: static</code> : il suit le flux normal de la page</p>
+
+      <h3>relative</h3>
+      <p>L'élément est décalé avec <code>top</code> / <code>left</code> par rapport à sa position d'origine</p>
+
+      <div class="zone">
+        <div class="boite">1</div>
+        <div class="boite relative">2 (relative)</div>
+        <div class="boite">3</div>
+      </div>
+
+
+      <h3>absolute</h3>
+      <p>L'élément sort du flux (les autres prennent sa place) et se positionne par rapport au premier parent en <code>position: relative</code></p>
+
+      <div class="zone parent">
+        <div class="boite">1</div>
+        <div class="boite absolute">2 (absolute)</div>
+        <div class="boite">3</div>
+      </div>
+
+      <h3>z-index</h3>
+      <p>Définit quel élément positionné passe devant l'autre: plus la valeur est grand, plus il est devant</p>
+
+      <div class="zone parent superposition">
+        <div class="boite carre devant">1 (z-index: 2)</div>
+        <div class="boite carre derriere">2</div>
+      </div>
+
+      <h3>Exemple: une incône dans un champ</h3>
+      <p>Le parent est en relative, l'icône en absolute</p>
+      <div class="champ">
+        <span class="icone">@</span>
+        <input type="email" name="email" id="email" placeholder="Votre email">
+      </div>
+
+      <h3>fixed</h3>
+      <p>L'élément est fixé par rapport à l'écran: il reste visible pendant le défilement (voir le lien "Haut de la page" en bas à droite)</p>
+      <a href="#" class="retour-haut">Haut de la page</a>
+
+    </section>
+
+
+    <h2>Flex:</h2>
+
+
+
+
+    <h2>Grid:</h2>
+
+
+
+
+
+  </body>
+</html>

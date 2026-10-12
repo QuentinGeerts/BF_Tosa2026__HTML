@@ -1,0 +1,12 @@
+:root {
+  /* Couleurs (3 notations différentes) */
+  --brun: #4b2e1f; /* hexadécimal */
+  --moutarde: rgb(214, 162, 46); /* rgb */
+  --creme: hsl(40, 45%, 94%); /* hsl */
+  --brique: firebrick; /* nom */
+  --ligne-paire: rgba(75, 46, 31, 0.08); /* rgba : brun transparent */
+
+  /* Police */
+  --police-titre: Georgia, "Times New Roman", serif;
+  --police-texte: Verdana, sans-serif;
+}

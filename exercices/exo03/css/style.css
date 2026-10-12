@@ -1,0 +1,142 @@
+/* Les variables doivent être importées avant toute autre règle */
+@import url("./variables.css");
+
+body {
+  margin: 0;
+  padding: 0 2rem 2rem;
+  background-color: var(--creme);
+  color: var(--brun);
+  font-family: var(--police-texte);
+  font-size: 1rem;
+}
+
+h1 {
+  font-family: var(--police-titre);
+  font-size: 2.5rem;
+}
+
+/* ===== 1. Le menu ===== */
+
+.menu {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0 -2rem;
+  padding: 1rem 2rem;
+  background-color: var(--brun);
+}
+
+.menu a {
+  display: block;
+  padding: 0.5em 1em;
+  color: var(--creme);
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 3px solid transparent;
+}
+
+/* Survol */
+.menu a:hover {
+  background-color: var(--moutarde);
+  color: var(--brun);
+}
+
+/* Pendant le clic (après :hover, sinon :hover l'écrase) */
+.menu a:active {
+  background-color: var(--brique);
+  color: white;
+}
+
+/* Navigation au clavier (touche Tab) */
+.menu a:focus {
+  outline: 2px dashed var(--moutarde);
+  outline-offset: 2px;
+}
+
+/* Page en cours */
+.menu a.actif {
+  border-bottom-color: var(--moutarde);
+}
+
+.menu a.actif::before {
+  content: "▸ ";
+}
+
+/* Le dernier lien ressemble à un bouton */
+.menu li:last-child a {
+  border: 2px solid var(--moutarde);
+  font-weight: bold;
+}
+
+/* ===== 2. L'introduction ===== */
+
+.intro {
+  max-width: 40rem;
+  line-height: 1.6;
+}
+
+/* Bonus : lettrine */
+.intro::first-letter {
+  float: left; /* La lettre sort du flux : le texte l'entoure */
+  margin-right: 0.3rem; /* Espace entre la lettre et le texte */
+  font-family: var(--police-titre);
+  font-size: 3.2rem; /* Assez grande pour couvrir 2 à 3 lignes */
+  line-height: 1; /* Supprime l'espace vertical en trop autour de la lettre */
+  color: var(--moutarde);
+}
+
+/* ===== 3. La carte ===== */
+
+.carte {
+  width: 80%;
+  border-collapse: collapse;
+}
+
+.carte caption {
+  margin-bottom: 0.5rem;
+  font-family: var(--police-titre);
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.carte th,
+.carte td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--brun);
+  text-align: left;
+}
+
+.carte th {
+  background-color: var(--brun);
+  color: var(--creme);
+}
+
+/* Une ligne sur deux */
+.carte tbody tr:nth-child(even) {
+  background-color: var(--ligne-paire);
+}
+
+/* Ligne survolée (après nth-child pour passer devant) */
+.carte tbody tr:hover {
+  background-color: var(--moutarde);
+}
+
+.carte .prix {
+  text-align: right;
+}
+
+/* Le € n'existe pas dans le HTML : il est ajouté par le CSS */
+.carte .prix::after {
+  content: " €";
+}
+
+/* ===== Bonus : thème sombre ===== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brun: #e8d9c4;
+    --creme: hsl(20, 20%, 14%);
+    --ligne-paire: rgba(232, 217, 196, 0.08);
+  }
+}

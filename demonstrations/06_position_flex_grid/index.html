@@ -4,19 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Position, Flex et Grid</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    
     <h1>Position, Flex et Grid</h1>
 
-
     <section>
-      <h2>Position:</h2>
-      <p>Par défaut, tout élément est en <code>position: static</code> : il suit le flux normal de la page</p>
+      <h2>1. Position:</h2>
+      <p>
+        Par défaut, tout élément est en <code>position: static</code> : il suit
+        le flux normal de la page
+      </p>
 
       <h3>relative</h3>
-      <p>L'élément est décalé avec <code>top</code> / <code>left</code> par rapport à sa position d'origine</p>
+      <p>
+        L'élément est décalé avec <code>top</code> / <code>left</code> par
+        rapport à sa position d'origine
+      </p>
 
       <div class="zone">
         <div class="boite">1</div>
@@ -24,9 +28,11 @@
         <div class="boite">3</div>
       </div>
 
-
       <h3>absolute</h3>
-      <p>L'élément sort du flux (les autres prennent sa place) et se positionne par rapport au premier parent en <code>position: relative</code></p>
+      <p>
+        L'élément sort du flux (les autres prennent sa place) et se positionne
+        par rapport au premier parent en <code>position: relative</code>
+      </p>
 
       <div class="zone parent">
         <div class="boite">1</div>
@@ -35,7 +41,10 @@
       </div>
 
       <h3>z-index</h3>
-      <p>Définit quel élément positionné passe devant l'autre: plus la valeur est grand, plus il est devant</p>
+      <p>
+        Définit quel élément positionné passe devant l'autre: plus la valeur est
+        grand, plus il est devant
+      </p>
 
       <div class="zone parent superposition">
         <div class="boite carre devant">1 (z-index: 2)</div>
@@ -46,15 +55,21 @@
       <p>Le parent est en relative, l'icône en absolute</p>
       <div class="champ">
         <span class="icone">@</span>
-        <input type="email" name="email" id="email" placeholder="Votre email">
+        <input type="email" name="email" id="email" placeholder="Votre email" />
       </div>
 
       <h3>fixed</h3>
-      <p>L'élément est fixé par rapport à l'écran: il reste visible pendant le défilement (voir le lien "Haut de la page" en bas à droite)</p>
+      <p>
+        L'élément est fixé par rapport à l'écran: il reste visible pendant le
+        défilement (voir le lien "Haut de la page" en bas à droite)
+      </p>
       <a href="#" class="retour-haut">Haut de la page</a>
 
       <h3>sticky</h3>
-      <p>L'élément reste dans le flux, puis "coller" à la position indiquée quand on fait défiler son conteneur</p>
+      <p>
+        L'élément reste dans le flux, puis "coller" à la position indiquée quand
+        on fait défiler son conteneur
+      </p>
 
       <div class="zone defilement">
         <p class="collant">Titre collant</p>
@@ -65,20 +80,318 @@
         <p>Ligne suivant</p>
         <p>Ligne suivant</p>
       </div>
+    </section>
+
+    <section>
+      <h2>2. Flex:</h2>
+
+      <h3>display: flex</h3>
+      <p>
+        Placé sur le parent, il aligne ses enfants côte à côte, sur une ligne
+      </p>
+
+      <div class="zone flex">
+        <div class="boite">1</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+      </div>
+
+      <h3>justify-content</h3>
+      <p>
+        Répartition de l'espace entre les enfants sur l'axe principal
+        (horizontal)
+      </p>
+
+      <div class="zone flex between">
+        <div class="boite">1</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+      </div>
+
+      <div class="zone flex around">
+        <div class="boite">1</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+      </div>
+
+      <div class="zone flex evenly">
+        <div class="boite">1</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+      </div>
+
+      <h3>align-items</h3>
+      <p>L'alignement des les enfants sur l'axe secondaire (vertical)</p>
+
+      <div class="zone flex haut start">
+        <div class="boite">1</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+      </div>
+
+      <div class="zone flex haut ai-center">
+        <div class="boite">1</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+      </div>
+
+      <div class="zone flex haut end">
+        <div class="boite">1</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+      </div>
+
+      <h3>flex-direction</h3>
+
+      <h4>row</h4>
+      <div class="zone flex row">
+        <div class="boite">1</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+      </div>
+
+      <h4>column</h4>
+      <div class="zone flex column">
+        <div class="boite">1</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+      </div>
+
+      <h4>row-reverse</h4>
+      <div class="zone flex row-reverse">
+        <div class="boite">1</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+      </div>
+
+      <h4>column-reverse</h4>
+      <div class="zone flex column-reverse">
+        <div class="boite">1</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+      </div>
+
+      <h3>flex-grow</h3>
+      <p>
+        Placé sur un enfant, il indique quelle part de l'espace RESTANT il
+        prend.
+      </p>
+      <p></p>
+      <div class="zone flex">
+        <div class="boite size-fixe">1</div>
+        <div class="boite grow-1">2</div>
+        <div class="boite grow-2">3</div>
+      </div>
+
+      <h3>flex-shrink</h3>
+      <p>Indiquer si un enfant peut rétrtécir quand il manque de la place</p>
+      <p>Par défaut: 1 | Avec 0, il garde sa taille</p>
+      <div class="zone flex">
+        <div class="boite base">1</div>
+        <div class="boite base">2</div>
+        <div class="boite base ne-retrecit-pas">3</div>
+      </div>
+
+      <h3>flex-basis</h3>
+      <p>
+        La taille de départ d'un enfant, avant que l'espace restant soit partagé
+      </p>
+      <p>Comme un width mais en flex</p>
+
+      <div class="zone flex">
+        <div class="boite">1</div>
+        <div class="boite base">2</div>
+        <div class="boite">3</div>
+      </div>
+
+      <h3>La raccourci flex</h3>
+      <p><code>flex: grow shrink basis</code> regroupe les trois.</p>
+      <p><code>flex: 1</code> (= <code>flex: 1 1 0</code>)</p>
+
+      <div class="zone flex">
+        <div class="boite remplit">2 (flex: 1)</div>
+        <div class="boite fixe">1 (flex: 0 0 150px)</div>
+      </div>
+
+      <h3>flex-wrap + gap</h3>
+      <p>
+        <code>flex-wrap: wrap</code> passe les enfants à la ligne quand il n'y a
+        plus de place. <code>gap</code> ajoute un espace entre eux.
+      </p>
+
+      <div class="zone flex wrap">
+        <div class="boite large">1</div>
+        <div class="boite large">2</div>
+        <div class="boite large">3</div>
+        <div class="boite large">4</div>
+        <div class="boite large">5</div>
+      </div>
+
+
+      <h3>Exemple: un menu</h3>
+      <p>Un flex sur le <code>nav</code> (logo à gauche, liens à droite)</p>
+
+      <nav class="menu">
+        <span>Logo</span>
+
+        <ul>
+          <li><a href="#" class="active">Accueil</a></li>
+          <li><a href="#">Cours</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+
+      <h3>Exemple: centrer un élément</h3>
+      <p><code>justify-content: center</code> + <code>align-items: center</code></p>
+
+      <div class="zone flex h-250 middle-of-middle">
+        <div class="boiter bordered">Au centre</div>
+      </div>
 
     </section>
 
+    <section>
+      <h2>3. Grid:</h2>
 
-    <h2>Flex:</h2>
+      <h3>grid-template-columns</h3>
+      <p><code>display: grid</code> découpe le parent en grille</p>
+      <p><code>grid-template-columns: repeat(3, 1fr)</code> crée 3 colonnes de même largeur</p>
+      <div class="grille">
+        <div class="boite">1</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+        <div class="boite">4</div>
+        <div class="boite">5</div>
+        <div class="boite">6</div>
+      </div>
+
+      <h3>grid-template-rows</h3>
+      <p>Même principe que pour les colonnes, mais pour la hauteur des lignes.</p>
+      <div class="grille rangees">
+        <div class="boite">1</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+        <div class="boite">4</div>
+        <div class="boite">5</div>
+        <div class="boite">6</div>
+        <div class="boite">7</div>
+        <div class="boite">8</div>
+        <div class="boite">9</div>
+      </div>
+
+      <h3>Mélanger les unités</h3>
+      <p>Les tailles fixes (px) sont calculées en premier</p>
+      <p>Les fr se partagent le reste ensuite.</p>
+
+      <div class="grille unites">
+        <div class="boite">150px</div>
+        <div class="boite">1fr</div>
+        <div class="boite">2fr</div>
+      </div>
 
 
+      <h3>grid-column</h3>
+      <div class="grille">
+        <div class="boite double">1 (2 colonnes)</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+        <div class="boite">4</div>
+        <div class="boite">5</div>
+      </div>
+
+      <h3>Placement par numéros de lignes</h3>
+      
+      <div class="grille">
+        <div class="boite bloc-large">1</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+        <div class="boite">4</div>
+      </div>
 
 
-    <h2>Grid:</h2>
+      <h3>Exemple: la mise en page d'un site</h3>
+      <p>
+        <code>grid-template-areas</code> "dessine" la page avec des noms, puis chaque élément est placé avec <code>grid-area</code>
+      </p>
+
+      <div class="page">
+        <header class="boite">Header</header>
+        <aside class="boite">Aside</aside>
+        <main class="boite">Main</main>
+        <footer class="boite">Footer</footer>
+      </div>
 
 
+      <h2>4. Quoi utiliser quand ?</h2>
+      <p>
+        La règle simple:
+        - flex pour une dimension (ligne OU colonne)
+        - grid pour deux dimensions (lignes ET colonnes)
+      </p>
+
+      <table class="recapitulatif">
+        <thead>
+          <tr>
+            <th>Besoin</th>
+            <th>Règles CSS</th>
+            <th>Exemples</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Aligner des éléments sur une ligne ou une colonne</td>
+            <td><code>display: flex</code></td>
+            <td>Menu, barre de boutons, logo + liens</td>
+          </tr>
+
+          <tr>
+            <td>Centrer un élément</td>
+            <td><code>display:flex</code></td>
+            <td>Message au milieu d'un bloc</td>
+          </tr>
+
+          <tr>
+            <td>Des éléments de tailles variable qui passent à la ligne</td>
+            <td><code>display: flex</code> + <code>flex-wrap</code></td>
+            <td>Liste</td>
+          </tr>
+
+          <tr>
+            <td>Organiser en lignes ET en colonnes</td>
+            <td><code>display: grid</code></td>
+            <td>Galerie de photos, catalogue de produits</td>
+          </tr>
+
+          <tr>
+            <td>Mettre en page tout la page</td>
+            <td><code>display: grid</code> + <code>grid-template-areas</code></td>
+            <td>header / aside / main / footer</td>
+          </tr>
+
+          <tr>
+            <td>Placer un élément par-dessus un autre</td>
+            <td><code>position: absolute</code> dans un parent relative</td>
+            <td>Badge sur une image, icône dans un champ</td>
+          </tr>
+
+          <tr>
+            <td>Garder un élément visible à l'écran</td>
+            <td><code>position: fixed</code></td>
+            <td>Bouton "Haut de la page", bandeau de cookie</td>
+          </tr>
+
+          <tr>
+            <td>Garder un élément visible pendant le défilement de sa zone</td>
+            <td><code>position: sticky</code></td>
+            <td>En-tête de tableau, menu qui reste en haut, ...</td>
+          </tr>
+
+        </tbody>
+      </table>
 
 
-
+    </section>
   </body>
 </html>

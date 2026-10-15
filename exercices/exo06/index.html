@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Indispensable pour le responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les Pattes Libres - Refuge animalier</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="entete">
+      <a href="#accueil" class="logo">
+        <!-- Logo SVG : un ovale (le coussinet) et 4 cercles (les doigts) -->
+        <svg width="60" height="60" viewBox="0 0 60 60">
+          <ellipse cx="30" cy="40" rx="14" ry="11" fill="#5b3a29" />
+          <circle cx="13" cy="24" r="6" fill="#5b3a29" />
+          <circle cx="23" cy="14" r="6" fill="#5b3a29" />
+          <circle cx="37" cy="14" r="6" fill="#5b3a29" />
+          <circle cx="47" cy="24" r="6" fill="#5b3a29" />
+        </svg>
+        <span>Les Pattes Libres</span>
+      </a>
+
+      <nav>
+        <ul class="menu">
+          <!-- Les href correspondent aux id des sections -->
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#animaux">Nos animaux</a></li>
+          <li><a href="#adopter">Adopter</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="accueil">
+        <h1>Bienvenue au refuge</h1>
+        <p>
+          Depuis 2012, notre équipe de bénévoles recueille les chiens et les
+          chats abandonnés de la région bruxelloise. Ils sont soignés, nourris
+          et attendent une famille pour une nouvelle vie.
+        </p>
+        <img
+          src="images/refuge.jpg"
+          alt="Le jardin du refuge avec des chiens qui jouent"
+        />
+      </section>
+
+      <section id="animaux">
+        <h2>Nos animaux</h2>
+
+        <div class="cartes">
+          <!-- data-espece sert au sélecteur d'attribut dans le CSS -->
+          <article class="carte" data-espece="chien">
+            <img src="images/rex.jpg" alt="Rex, berger allemand" />
+            <h3>Rex</h3>
+            <p>5 ans</p>
+          </article>
+
+          <article class="carte" data-espece="chat">
+            <img src="images/mimi.jpg" alt="Mimi, chatte tigrée" />
+            <h3>Mimi</h3>
+            <p>2 ans</p>
+          </article>
+
+          <article class="carte" data-espece="chien">
+            <img src="images/pistache.jpg" alt="Pistache, petit chien croisé" />
+            <h3>Pistache</h3>
+            <p>1 an</p>
+          </article>
+
+          <article class="carte" data-espece="chat">
+            <img src="images/caramel.jpg" alt="Caramel, chat roux" />
+            <h3>Caramel</h3>
+            <p>8 ans</p>
+          </article>
+
+          <article class="carte" data-espece="chien">
+            <img src="images/oscar.jpg" alt="Oscar, labrador noir" />
+            <h3>Oscar</h3>
+            <p>3 ans</p>
+          </article>
+
+          <article class="carte" data-espece="chat">
+            <img src="images/plume.jpg" alt="Plume, chat blanc" />
+            <h3>Plume</h3>
+            <p>4 ans</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="journee">
+        <h2>Une journée au refuge</h2>
+
+        <!-- controls : boutons lecture / pause, poster : image avant la lecture -->
+        <video controls poster="images/poster.jpg">
+          <source src="video/refuge.mp4" type="video/mp4" />
+          <!-- Texte de secours : affiché si le navigateur ne lit pas la vidéo -->
+          Votre navigateur ne peut pas lire cette vidéo.
+        </video>
+      </section>
+
+      <section id="adopter">
+        <h2>Adopter</h2>
+        <p>
+          Un animal vous a plu ? Remplissez ce formulaire, nous vous rappelons
+          pour organiser une visite.
+        </p>
+
+        <form action="#" method="get" class="formulaire">
+          <label for="nom">Nom *</label>
+          <input type="text" id="nom" name="nom" required />
+
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="animal">Animal choisi</label>
+          <select id="animal" name="animal">
+            <option value="">-- Choisir un animal --</option>
+            <option value="rex">Rex</option>
+            <option value="mimi">Mimi</option>
+            <option value="pistache">Pistache</option>
+            <option value="caramel">Caramel</option>
+            <option value="oscar">Oscar</option>
+            <option value="plume">Plume</option>
+          </select>
+
+          <!-- disabled : le champ ne peut pas être modifié... et n'est PAS envoyé -->
+          <label for="refuge">Refuge</label>
+          <input
+            type="text"
+            id="refuge"
+            name="refuge"
+            value="Bruxelles"
+            disabled
+          />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <label class="case">
+            <input type="checkbox" name="newsletter" value="oui" checked />
+            Recevoir la newsletter
+          </label>
+
+          <button type="submit">Envoyer ma demande</button>
+
+          <p>* : Champ requis</p>
+        </form>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <p>Refuge Les Pattes Libres<br />Rue du Refuge 1, 1000 Bruxelles</p>
+      <!-- target="_blank" : ouvre le lien dans un nouvel onglet -->
+      <a href="https://www.facebook.com" target="_blank">Notre page Facebook</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Bloc - Inscription</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Inscription</h1>
+    <p class="intro">Rejoignez la salle d'escalade Le Bloc : remplissez le formulaire, on vous recontacte pour votre première séance.</p>
+
+    <form class="formulaire" action="#">
+      <!-- Prénom et Nom sur la même ligne -->
+      <div class="ligne">
+        <div class="groupe">
+          <label for="prenom">Prénom</label>
+          <div class="champ">
+            <span class="icone">P</span>
+            <input type="text" id="prenom" name="prenom" />
+          </div>
+        </div>
+
+        <div class="groupe">
+          <label for="nom">Nom</label>
+          <div class="champ">
+            <span class="icone">N</span>
+            <input type="text" id="nom" name="nom" />
+          </div>
+        </div>
+      </div>
+
+      <div class="groupe">
+        <label for="email">E-mail</label>
+        <div class="champ">
+          <span class="icone">@</span>
+          <input type="email" id="email" name="email" required />
+          <!-- Bonus : icône de validation -->
+          <span class="validation">✓</span>
+        </div>
+      </div>
+
+      <!-- Bonus : Téléphone et Date de naissance côte à côte -->
+      <div class="ligne">
+        <div class="groupe">
+          <label for="telephone">Téléphone</label>
+          <div class="champ">
+            <span class="icone">#</span>
+            <input type="tel" id="telephone" name="telephone" />
+          </div>
+        </div>
+
+        <div class="groupe">
+          <label for="naissance">Date de naissance</label>
+          <div class="champ">
+            <span class="icone">*</span>
+            <input type="date" id="naissance" name="naissance" />
+          </div>
+        </div>
+      </div>
+
+      <div class="groupe">
+        <label for="niveau">Niveau</label>
+        <div class="champ">
+          <span class="icone">^</span>
+          <select id="niveau" name="niveau">
+            <option>Débutant</option>
+            <option>Intermédiaire</option>
+            <option>Confirmé</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="groupe">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+      </div>
+
+      <div class="envoi">
+        <button type="submit">S'inscrire</button>
+      </div>
+    </form>
+
+    <a href="#" class="aide">Besoin d'aide ?</a>
+  </body>
+</html>

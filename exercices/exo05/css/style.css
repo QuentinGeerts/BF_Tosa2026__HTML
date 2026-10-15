@@ -1,0 +1,204 @@
+/* ========== 1. VARIABLES ET BASE ========== */
+
+:root {
+  --tapis: #2e6b45;
+  --tapis-fonce: #1f4a30;
+  --rouge: #b3261e;
+  --noir: #1a1a1a;
+  --dos: #3a4a8c;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background-color: var(--tapis);
+  color: white;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* ========== 2. MISE EN PAGE GÉNÉRALE (GRID) ========== */
+
+.jeu {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  /* auto : en-tête et actions à la hauteur de leur contenu, le plateau prend le reste */
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "entete  entete"
+    "pioche  plateau"
+    "actions actions";
+  min-height: 100vh;
+}
+
+.entete  { grid-area: entete; }
+.pioche  { grid-area: pioche; }
+.plateau { grid-area: plateau; }
+.actions { grid-area: actions; }
+
+/* Titre à gauche, score à droite, alignés verticalement */
+.entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--tapis-fonce);
+}
+
+.score {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.pioche,
+.plateau {
+  padding: 20px;
+}
+
+.pioche {
+  border-right: 2px solid var(--tapis-fonce);
+}
+
+/* Boutons centrés et espacés */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--tapis-fonce);
+}
+
+button {
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: white;
+  border: 2px solid var(--noir);
+}
+
+button:hover {
+  background-color: #f0d36b;
+}
+
+/* ========== 3. UNE CARTE ========== */
+
+/*
+  position: relative : sert de repère aux coins (absolute)
+  et permet de décaler la carte sélectionnée.
+  Le flex centre le grand symbole.
+*/
+.carte {
+  position: relative;
+  width: 100px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid var(--noir);
+  border-radius: 6px;
+}
+
+.rouge {
+  color: var(--rouge);
+}
+
+.noire {
+  color: var(--noir);
+}
+
+.symbole {
+  font-size: 3rem;
+}
+
+.coin {
+  position: absolute;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.haut {
+  top: 5px;
+  left: 8px;
+}
+
+.bas {
+  bottom: 5px;
+  right: 8px;
+}
+
+/* Le dos : pas de contenu, une couleur unie et un cadre blanc */
+.dos {
+  background-color: var(--dos);
+  border: 4px solid white;
+}
+
+/* ========== 4. LA MAIN DU JOUEUR ========== */
+
+/* padding-top : laisse la place à la carte sélectionnée qui monte */
+.main-joueur {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-top: 20px;
+}
+
+/* flex-shrink: 0 : la carte garde ses 100px même quand la place manque */
+.main-joueur .carte {
+  flex-shrink: 0;
+}
+
+/* relative + top : la carte monte, mais sa place est gardée (les autres ne bougent pas) */
+.selectionnee {
+  top: -20px;
+  border-width: 3px;
+}
+
+/*
+  Bonus : la carte monte au survol.
+  :not(.selectionnee) évite que la carte sélectionnée redescende à -8px au survol
+*/
+.main-joueur .carte:not(.selectionnee):hover {
+  top: -8px;
+}
+
+/* ========== 5. BONUS ========== */
+
+/* sticky : l'en-tête reste en haut quand on fait défiler. z-index : il passe devant les cartes */
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Le paquet : les cartes sont empilées les unes sur les autres */
+.paquet {
+  position: relative;
+  width: 120px;
+  height: 160px;
+}
+
+.paquet .carte {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Chaque carte suivante est un peu plus décalée */
+.paquet .carte:nth-child(2) {
+  top: 4px;
+  left: 4px;
+}
+
+.paquet .carte:nth-child(3) {
+  top: 8px;
+  left: 8px;
+}

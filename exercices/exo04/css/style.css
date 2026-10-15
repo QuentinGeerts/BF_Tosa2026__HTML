@@ -1,0 +1,148 @@
+/* ========== 1. VARIABLES ET BASE ========== */
+
+:root {
+  --fond: #f2eee6;
+  --texte: #2b2b2b;
+  --vert: #2f4f3a;
+  --orange: #c9561f;
+  --bordure: #a89f91;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  background-color: var(--fond);
+  color: var(--texte);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--vert);
+}
+
+.intro {
+  text-align: center;
+}
+
+/* ========== 2. MISE EN PAGE DU FORMULAIRE ========== */
+
+/* max-width + margin auto : 500px maximum et centré */
+.formulaire {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-top: 5px solid var(--vert);
+}
+
+/* Le label au-dessus du champ : on empile en colonne */
+.groupe {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+/* Deux groupes côte à côte, qui se partagent la largeur à parts égales */
+.ligne {
+  display: flex;
+  gap: 15px;
+}
+
+.ligne .groupe {
+  flex: 1;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* box-sizing : le padding est compris dans les 100%, le champ ne déborde pas */
+input,
+select,
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--bordure);
+  font-family: inherit;
+}
+
+/* Le bouton aligné à droite */
+.envoi {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--vert);
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: var(--orange);
+}
+
+/* ========== 3. LES ICÔNES DANS LES CHAMPS ========== */
+
+/* Le parent en relative : c'est lui qui sert de repère à l'icône */
+.champ {
+  position: relative;
+}
+
+/*
+  top: 0 + bottom: 0 : l'icône prend toute la hauteur du champ.
+  Le flex centre ensuite le caractère verticalement.
+*/
+.icone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  color: var(--bordure);
+  font-weight: bold;
+}
+
+/* Laisse la place à l'icône : le texte ne passe pas dessous */
+.champ input,
+.champ select {
+  padding-left: 30px;
+}
+
+/* Bonus : l'icône change de couleur quand le champ a le focus */
+.champ:has(:focus) .icone {
+  color: var(--orange);
+}
+
+/* Bonus : le ✓ à droite, caché par défaut, affiché quand l'e-mail est valide */
+.validation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  display: none;
+  align-items: center;
+  color: green;
+}
+
+.champ input:valid + .validation {
+  display: flex;
+}
+
+/* ========== 4. LIEN D'AIDE ========== */
+
+/* fixed : reste en bas à droite de l'écran pendant le défilement */
+.aide {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: var(--orange);
+  color: white;
+  text-decoration: none;
+}

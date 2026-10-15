@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeu de cartes</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="jeu">
+      <header class="entete">
+        <h1>La Bataille</h1>
+        <p class="score">Score : 12</p>
+      </header>
+
+      <aside class="pioche">
+        <h2>Pioche</h2>
+        <!-- Bonus : un conteneur et deux cartes .dos en plus pour former un paquet -->
+        <div class="paquet">
+          <div class="carte dos"></div>
+          <div class="carte dos"></div>
+          <div class="carte dos"></div>
+        </div>
+      </aside>
+
+      <main class="plateau">
+        <h2>Votre main</h2>
+        <div class="main-joueur">
+          <div class="carte rouge">
+            <span class="coin haut">A ♥</span>
+            <span class="symbole">♥</span>
+            <span class="coin bas">A ♥</span>
+          </div>
+          <div class="carte noire">
+            <span class="coin haut">7 ♠</span>
+            <span class="symbole">♠</span>
+            <span class="coin bas">7 ♠</span>
+          </div>
+          <div class="carte rouge selectionnee">
+            <span class="coin haut">R ♦</span>
+            <span class="symbole">♦</span>
+            <span class="coin bas">R ♦</span>
+          </div>
+          <div class="carte noire">
+            <span class="coin haut">10 ♣</span>
+            <span class="symbole">♣</span>
+            <span class="coin bas">10 ♣</span>
+          </div>
+          <div class="carte rouge">
+            <span class="coin haut">D ♥</span>
+            <span class="symbole">♥</span>
+            <span class="coin bas">D ♥</span>
+          </div>
+        </div>
+      </main>
+
+      <footer class="actions">
+        <button>Piocher</button>
+        <button>Jouer la carte</button>
+      </footer>
+    </div>
+  </body>
+</html>

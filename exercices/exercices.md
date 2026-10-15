@@ -260,3 +260,49 @@ Créez un dossier `exo05` avec une page `index.html` contenant le code ci-dessou
 - Au survol, une carte de la main monte légèrement
 - L'en-tête reste visible en haut de l'écran quand on fait défiler la page
 - La pioche ressemble à un paquet : ajoutez deux cartes `.dos` dans le HTML et superposez-les avec un léger décalage entre chacune
+
+
+## 6. Le refuge "Les Pattes Libres"
+
+Créer le site d'un refuge animalier, sur une seule page `index.html` avec une feuille de style `css/style.css`.
+
+### Contenu de la page
+
+1. **En-tête** : un logo en SVG et un menu (Accueil, Nos animaux, Adopter, Contact) avec des liens vers les sections de la page
+2. **Accueil** : un titre, un paragraphe de présentation et une grande image
+3. **Nos animaux** : 6 cartes (photo, nom, âge), chacune avec un attribut `data-espece` ("chien" ou "chat")
+4. **Une journée au refuge** : une vidéo
+5. **Adopter** : un formulaire de demande d'adoption
+6. **Pied de page** : l'adresse du refuge et un lien vers sa page Facebook
+
+### Partie A : Responsive
+
+- La balise `<meta name="viewport">` est présente
+- Le CSS est écrit en **mobile first**, avec une media query `@media (min-width: 768px)`
+- Le menu est **vertical sur mobile** et **horizontal sur ordinateur** (Flexbox)
+- Les cartes sont sur **1 colonne sur mobile** et **3 colonnes sur ordinateur** (Grid)
+- Aucune image ne dépasse de l'écran (`max-width: 100%`)
+
+### Partie B : HTML avancé
+
+- Le logo est un **SVG** dessiné par vous (une patte : un ovale et 4 petits cercles)
+- Les cartes des chats et des chiens ont une couleur de bordure différente, grâce à un **sélecteur d'attribut** sur `data-espece`
+- La vidéo a des contrôles, une image `poster` et un texte de secours
+- Le formulaire contient :
+  - nom et e-mail **obligatoires**
+  - le choix de l'animal (liste déroulante)
+  - une case "Recevoir la newsletter" **cochée par défaut**
+  - un champ "Refuge" **désactivé**, contenant "Bruxelles"
+- Le lien Facebook s'ouvre dans un **nouvel onglet**
+- Les titres utilisent une police importée avec `@font-face`
+
+### Ressources
+
+- Photos : https://unsplash.com ou https://www.pexels.com/fr-fr/
+- Vidéos : https://www.pexels.com/fr-fr/videos/ (choisissez la plus petite taille)
+- Polices : https://fonts.google.com (bouton "Get font", puis "Download all")
+
+### À déposer
+
+- Le dossier du projet en `.zip`
+- Deux captures d'écran : affichage ordinateur et affichage mobile (outils de développement, mode responsive)

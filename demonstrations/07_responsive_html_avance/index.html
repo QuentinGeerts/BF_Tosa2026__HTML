@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Indispensable pour le response : sans elle, le mobile affiche la version ordinateu dézoomée -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Response et HTML avancé</title>
+    <link href="https://fonts.googleapis.com/css2?family=Isometra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Responsive et HTML avancé</h1>
+
+    <!-- Media Queries -->
+
+    <section>
+      <h2>1. Media queries</h2>
+      <p>
+        Redimensionner la fenêtre : 1 colonne sur mobile, 2 sur tablette, 4 sur
+        ordinateur
+      </p>
+
+      <!-- div.cartes>div{Carte $}.carte*4 -->
+      <div class="cartes">
+        <div class="carte">Carte 1</div>
+        <div class="carte">Carte 2</div>
+        <div class="carte">Carte 3</div>
+        <div class="carte">Carte 4</div>
+      </div>
+
+      <img
+        src="https://picsum.photos/1200/400"
+        alt="Paysage d'exemple"
+        class="banniere"
+      />
+    </section>
+
+    <!-- Block et inline -->
+    <section>
+      <h2>2. Éléments de type Block et inline</h2>
+
+      <h3>Éléments de type BLOCK</h3>
+
+      <div class="contour">Je suis une div (balise universelle)</div>
+      <p class="contour">Je suis un paragraphe</p>
+      <h4 class="contour">Je suis un titre de niveau 1</h4>
+      <h6 class="contour">Je suis un titre de niveau 6</h6>
+
+      <h3>Éléments de type INLINE</h3>
+
+      <span class="contour">Je suis une span (balise universelle)</span>
+      <a href="#" class="contour">lien</a>
+      <strong class="contour">strong</strong>
+
+      <h3>Éléments de type INLINE-BLOCK</h3>
+
+      <p class="contour">
+        <span class="contour inline-block">span en inline-block</span>
+        <span class="contour inline-block">qui accepte width et height</span>
+      </p>
+
+      <h3>Passage de l'un à l'autre</h3>
+
+      <p class="contour inline">Lorem ipsum</p>
+      <p class="contour">Lorem ipsum</p>
+
+      <!-- Attention à l'ordre de votre CSS -->
+      <span class="contour block inline">Hello</span>
+      <span class="contour block inline">Tosa</span>
+    </section>
+
+    <section>
+      <h2>3. Attributs booléens et target</h2>
+
+      <form>
+        <label for="id">
+          Id:
+          <input type="number" name="id" id="id" readonly value="1" />
+        </label>
+
+        <label for="pseudo">
+          Pseudo (obligatoire):
+          <input type="text" name="pseudo" id="pseudo" required />
+        </label>
+
+        <label for="css">
+          <input type="checkbox" name="css" id="css" checked />
+          CSS
+        </label>
+
+        <label for="country">Pays</label>
+        <select name="country" id="country">
+          <option value="">--- Sélectionner le pays ---</option>
+          <option value="BE" selected>Belgique</option>
+          <option value="FR">France</option>
+        </select>
+
+        <label for="homme">
+          <input type="radio" name="sexe" id="homme" checked />
+          Homme
+        </label>
+
+        <label for="femme">
+          <input type="radio" name="sexe" id="femme" />
+          Femme
+        </label>
+
+        <button>Envoyer</button>
+        <button disabled>Envoyer désactivé</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>4. Attributs data-*</h2>
+
+      <ul class="products">
+        <li data-category="fruit" data-price="2.50">Pommes</li>
+        <li data-category="legume" data-price="1.80">Carottes</li>
+        <li data-category="fruit" data-price="3.20">Fraises</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Vidéo</h2>
+      <video controls poster="https://picsum.photos/400/220">
+        <source src="video/music.mp4" type="video/mp4">
+        Votre navigateur ne peut pas lire cette vidéo.
+      </video>
+    </section>
+
+    <section>
+      <h2>6. SVG</h2>
+
+      <svg width="200" height="120">
+        <rect x="10" y="10" width="90" height="90" fill="steelblue" />
+        <circle cx="150" cy="55" r="45" fill="orange" stroke="black" stroke-width="3" />
+        <text x="40" y="60" font-size="16">SVG</text>
+      </svg>
+    </section>
+
+    <section>
+      <h2>7. @font-face</h2>
+
+      <p class="custom-font">Ce texte utilise Google Sans, importée avec @font-face.</p>
+      <p class="custom-font bold">Et celui-ci sa version Bold.</p>
+      <p class="custom-font2">En utilisant Bitcount Ink.</p>
+      <p class="custom-font3">En utilisant Isometra.</p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+/* Import de police */
+
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&display=swap');
+
+@font-face {
+  font-family: 'Google Sans';
+  font-weight: 400;
+  src: url('../fonts/GoogleSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  font-weight: 700;
+  src: url('../fonts/GoogleSans-Bold.ttf');
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 20px 200px;
+}
+
+section {
+  border-top: 2px solid #ddd;
+  margin-top: 30px;
+}
+
+/* 1. Media queries  */
+
+/*
+  Approche "mobile first" : on écrit d'abord le style MOBILE, puis on ajout edes règles pour les écrans plus grand avec min-width
+*/
+
+.cartes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.carte {
+  padding: 20px;
+  background-color: lightcoral;
+  border: 1px solid coral;
+}
+
+/* Bonne pratique : une image ne dépasse jamais de son conteneur */
+.banniere {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+}
+
+/* 
+  <!> Toujours à placer APRÈS les règles définies pour la version mobile (Mobile First)
+
+  <!> À l'ordre de vos media queries :
+  Rappel: la dernière écrase la précédente
+*/
+
+
+/* À partir de 600px (tablette) : 2 colonnes */
+@media (min-width: 600px) {
+  .cartes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banniere {
+    max-width: 75%;
+  }
+}
+
+/* À partir de 1000px (PC) : 4 colonnes */
+@media (min-width: 1000px) {
+  .cartes {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .banniere {
+    max-width: 50%;
+  }
+}
+
+
+
+/* 2.  BLOCK et inline */
+
+.contour {
+  border: 2px solid tomato;
+  padding: 5px;
+}
+
+/* 
+  bloc: prend toute la largeur, commence sur une nouvelle ligne
+
+  inline: prend la largeur de son contenu, reste dans le texte, IGNORE width et height
+
+  inline-block: reste en ligne, mais accepte width et height
+*/
+
+.inline-block {
+  display: inline-block;
+  width: 200px;
+}
+
+.inline {
+  display: inline;
+}
+
+.block {
+  display: block;
+}
+
+/* input[type="checkbox"] {
+  color: green;
+} */
+
+/* 4. Attributs data-* */
+
+/* Sélecteur d'attribut:  cible selon la valeur de data-category */
+
+.products li[data-category="fruit"] {
+  color: seagreen;
+}
+
+.products li[data-category="legume"] {
+  color: darkorange;
+}
+
+/* 
+  attr() affiche la valeur d'un attribut dans le contenu 
+*/
+.products li::after {
+  content: ' - ' attr(data-price) ' €';
+  color: gray;
+}
+
+video {
+  border: 2px solid gray;
+  width: 500px;
+}
+
+svg {
+  border: 1px solid gray;
+}
+
+/* Importer une police personnalisée */
+
+.custom-font {
+  font-family: "Google Sans", sans-serif;
+  font-size: 1.4rem;
+}
+
+.bold {
+  font-weight: 700; /* bold */
+}
+
+.custom-font2 {
+  font-family: "Bitcount Ink", system-ui;
+}
+
+.custom-font3 {
+  font-family: "Isometra", system-ui;
+}
